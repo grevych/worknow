@@ -1,0 +1,464 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700|Roboto+Condensed:400,700,300|Roboto:100,200,300,400' rel='stylesheet' type='text/css'>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <style>
+            html, body {
+                width:100%;
+                height:100%;
+            }
+            
+            * {
+                margin:0;
+                padding:0;
+            }
+            
+            
+            .square:before {
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+            
+            .square {
+                margin:0 12px 12px 0;
+                padding:4px;
+                position:relative; 
+                text-align:center; 
+                display:inline-block; 
+                width:10%; 
+                min-width:100px; 
+                border:1px solid #F2F2F2; 
+                overflow:hidden; 
+                border-radius:2px; 
+                float:left;
+                cursor:pointer;
+            }
+            
+            
+            .search_input:focus {
+                
+                outline:none;
+                width:90% !important;
+            }
+                
+                
+            header::after {
+                content:"";
+                position:absolute;
+                bottom:-10px;
+                left:134px;
+                width: 0; 
+            	height: 0; 
+            	border-left:8px solid transparent;
+            	border-right:8px solid transparent;
+            	border-top: 10px solid white;
+            }
+            
+            header::before {
+                content:"";
+                position:absolute;
+                bottom:-10px;
+                left:136px;
+                width: 0; 
+            	height: 0; 
+            	border-left:8px solid transparent;
+            	border-right:8px solid transparent;
+            	border-top: 10px solid rgba(0, 0, 0, .1);
+            }
+            
+            
+            .menu-item:hover {
+                background:#434343;
+            }
+            
+            .menu-item {
+                cursor:pointer;
+            }
+        </style>
+    </head>
+
+
+    <body>
+    <!-- #323232 
+    0px 4px 6px #F2F2F2;
+    0 0 8px rgba(0, 0, 0, .1);
+    0px 0px 4px 1px #6A6A6A #F88645
+    rgba(158, 199, 231, 0.46)
+    
+    
+    rgb(219, 103, 103)
+    #67BBDB
+    #67B6DB
+    #67B1DB
+    
+    F8534B
+    F58E65
+    
+    F8534B
+    
+    F58E65-->
+        <header style="width:100%; padding:10px 0; height:auto; box-shadow:0 0 8px rgba(0, 0, 0, .1); z-index:300; background:#FFF; position:fixed; top:0;">
+            <div style="width:192px; display:inline-block; padding-left:24px; overflow:hidden;">
+                <div style="display:inline-block; float:left; width:20px; height:auto;"><img style="display:block; width:100%;"src="cancan_icon.png"></div>
+                <span style="display:inline-block; font-family:Roboto Condensed; font-weight:400; font-size:18px; color:#F88645; float:left; line-height:20px; margin-left:6px;">Can</span>
+                <span style="display:inline-block; font-family:Roboto Condensed; font-weight:400; font-size:18px; color:#323232; float:left; line-height:20px;">Can</span>
+            
+                <span style="display:inline-block; font-size:16px; margin-left:20px; color:#323232; float:right; line-height:20px;"><i class="fa fa-thumbs-o-up"></i></span>
+                <span style="display:inline-block; font-size:16px; margin-left:20px; color:#323232; float:right; line-height:20px;"><i class="fa fa-bullhorn"></i></span>
+                <span style="display:inline-block; font-size:16px; margin-left:20px; color:#323232; float:right; line-height:20px;"><i class="fa fa-map-marker"></i></span>
+            </div>
+            
+            <div  style="width:50%; display:inline-block; margin-left:48px; overflow:hidden;  vertical-align:super;">
+                <i style="padding:4px 8px; font-size:14px; line-height:18px; position:relative; z-index:351;" class="fa fa-search"></i>
+                <input class="search_input" placeholder="Busca un perro perdido" type="text"  style=" width:150px; 
+                 padding:0 12px 0 32px; display:inline-block; position:relative;  background:transparent; line-height:26px;font-size: 14px;
+                font-weight: lighter;  border-radius:2px;
+                font-family: Roboto; border: 1px solid #CACACA; margin-left:-33px; background:#FFF; position:relative; z-index:350;">
+                </input>
+            </div>
+            
+            <div style="float:right; display:inline-block; padding-right:80px; width:auto; line-height:26px;">
+                <span style="font-size:14px; color:#323232;  line-height:20px;"><i class="fa fa-sort-desc"></i></span>
+            </div>
+
+        </header>
+        
+        
+        
+        
+        <div style="position:fixed; color:#E5E5E5; width:100%; overflow:hidden;  z-index:200; border-right:1px solid #F2F2F2; padding:80px 0px 0 0px; background:#323232; "> <!-- background:rgba(158, 199, 231, 0.46); -->
+            
+            <div style="position:relative; margin:0 50%; padding: 2px 20px;">
+                <div style=" position:relative;  display:inline-block; overflow:hidden; width:50px; border-radius:50%; box-shadow:0 0 2px #AAA;">
+                    <img src="benji03.png"  style="width:50px; display:block; border-radius:50%; ">
+                </div>
+            
+                <span style="font-family:Roboto;  font-weight:400; display:inline-block; float:left; margin-left:14px; ">
+                    <p style="font-size:14px;">Tommy</p>
+                    <p style="font-weight:300; font-size:12px;">Terrier Escoces</p>
+                </span>
+            
+                <span style="font-size:14px;  float:right;"><i class="fa fa-sort-desc"></i></span>
+            
+            
+
+            
+            </div>
+            <div style="font-family:Roboto; font-size:12px; font-weight:300; margin-top:40px; overflow:hidden; padding:0 20px; color:#FFF;">
+                <span style="padding:0 4px; display:inline-block; line-height:12px;"> <i  class="fa fa-tags fa-fw"></i></span>   
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Terrier <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Celaya <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">6 meses <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Ciego <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Cola cortada <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Negro <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Alameda <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Nervioso <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Enfermo <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+                <span style="display:inline-block; line-height:12px; padding:4px 6px; background:#F88645; border-radius:2px; margin:4px 2px;">Cachorro <i style="margin-left:4px;" class="fa fa-times"></i> </span>
+            </div>
+            
+        
+        <div style="position:absolute; bottom:0; left:0; right:0; border-top:1px solid #000;">
+            <span style="display:block; font-size:12px; color:#000; font-family:Roboto; font-weight:300;  text-align:center; padding:12px 0; border-top:1px solid #555;">
+                CanCan 2014 by Script Party
+            </span>
+        </div>
+            
+        </div>
+        
+        
+        
+        
+        <div style="height:90%; padding:30px 24px; margin:50px 0 0 240px; ">
+            <!-- 
+            <img class="square" src="benji01.png"  style=" position:relative; text-align:center; display:inline-block; width:10%; min-width:120px; border:1px solid #F2F2F2; overflow:hidden; border-radius:2px; ">
+            <img class="square" src="benji03.png"  style=" position:relative; text-align:center; display:inline-block; width:10%; min-width:120px; border:1px solid #F2F2F2; overflow:hidden; border-radius:2px; ">
+            <img class="square" src="benji04.png"  style=" position:relative; text-align:center; display:inline-block; width:10%; min-width:120px; border:1px solid #F2F2F2; overflow:hidden; border-radius:2px; ">
+            -->
+            
+
+            <!-- <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="benji04.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div> -->
+            
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p1.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p2.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p3.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p4.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p5.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p6.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p7.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p8.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p9.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p10.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p11.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p12.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p13.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p14.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p1.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p2.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p3.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p4.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p5.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p6.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p7.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p8.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p9.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p10.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p11.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p12.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p13.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p14.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p1.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p2.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p3.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p4.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p5.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p6.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p7.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p8.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p9.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p10.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p11.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p12.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p13.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+            <div class="square" >
+                <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px;">
+                    <img  src="p14.png"  style=" position:relative; width:100%;  ">
+                </div> 
+            </div>
+            
+
+            
+            
+            
+            
+            
+        </div>
+    
+    </body>
+
+</html>
